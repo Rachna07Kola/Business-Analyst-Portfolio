@@ -19,13 +19,13 @@ Detail-oriented and analytical master’s student specializing in Business Analy
 
 ## Education 
 
-**University of North Texas, Denton, TX**  
+**University of North Texas, Denton, USA**  
 *Master of Science in Business Analytics* | GPA: 3.5 | *Expected: Dec 2025*  
 **Coursework:** Data Visualization, Data Mining, Predictive Analysis, Business Statistics
 
-**St. Pious X Degree College, Hyderabad, India**  
+**Osmaina University, Hyderabad, India**  
 *Bachelor of Commerce in Computer Applications* | GPA: 4.0 | *Graduated: May 2023*  
-**Coursework:** Financial Planning and Performance, E-Commerce, IFRS, Business Statistics, Cost Accounting, Business Economics
+**Coursework:** Database Management Systems, Business Statistics, Management Information Systems, Financial Accounting
 
 ---
 
@@ -78,7 +78,6 @@ to improve engagement and knowledge retention.
 
 ## Certifications
 
-**Certifications:**  
 - Entrepreneurship Orientation Program (NSIC)  
 - Ad Mad Competition – Creative Strategy & Advertising
   
