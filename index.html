@@ -5,216 +5,221 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Business Analyst Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Times New Roman', Times, serif;
-      scroll-behavior: smooth;
-    }
-
-    header.hero {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
       padding: 0;
+      font-family: 'Times New Roman', serif;
+      box-sizing: border-box;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+    body {
+      background: url('https://c8.alamy.com/comp/2M9PJRR/business-analyst-concept-with-random-parts-of-program-codebusiness-analyst-text-written-on-programming-code-abstract-technology-background-of-softwar-2M9PJRR.jpg
+') repeat;
+      background-size: cover;
+      animation: scrollBackground 60s linear infinite;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    .hero-text h2 {
-      font-size: 2.5em;
-      margin-top: 20px;
+    @keyframes scrollBackground {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 0 100%;
+      }
     }
 
-    .hero-text button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #2a5298;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffdd57;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
     }
 
     section {
-      padding: 40px 20px;
-      background-color: #f9f9f9;
+      padding: 4rem 2rem;
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 2rem auto;
+      border-radius: 12px;
+      width: 90%;
+      animation: fadeUp 1s ease-in-out;
     }
 
-    h2 {
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
       text-align: center;
-      margin-bottom: 20px;
-      color: #2a5298;
+      animation: bounceIn 2s ease;
     }
 
-    .card {
-      background-color: white;
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 800px;
-      border-left: 5px solid #2a5298;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
     }
 
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #f3f3f3;
+      text-align: center;
+      text-shadow: 1px 1px 4px #000;
     }
 
-    .grid li {
-      background-color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    .project-item {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-left: 4px solid #ffdd57;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.4s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .project-item h3 {
+      color: #ffdd57;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .skill-bar {
+      background: #444;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff8c00, #ffa500);
+      animation: growBar 2s ease-out forwards;
+    }
+
+    @keyframes growBar {
+      from { width: 0%; }
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #2a5298;
-      color: white;
-    }
-
-    footer button {
-      background-color: white;
-      color: #2a5298;
-      border: none;
-      padding: 8px 16px;
-      margin-top: 10px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <nav>
-      <h1>Harshitha's Portfolio</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-      </ul>
-    </nav>
-    <section class="hero-text">
-      <h2>Turning Data into Insights</h2>
-      <p>Business Analyst | Data Storyteller | Tech-Enthusiast</p>
-      <button onclick="scrollToSection('about')">Explore</button>
-    </section>
+  <header>
+    <h1>Business Analyst Portfolio</h1>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a detail-oriented and driven master’s student in Business Analytics at the University of North Texas, with strong data analysis and visualization skills.</p>
+  <section class="hero">
+    <h2 class="section-title">Hello, I'm Harshitha</h2>
+    <p>I’m a master’s student at UNT with a strong foundation in business analysis, problem-solving, and AI-powered business solutions. Let’s explore!</p>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>University of North Texas</h3>
-      <p>MS in Business Analytics | GPA: 3.5 | Expected Dec 2025</p>
-    </div>
-    <div class="card">
-      <h3>Osmania University</h3>
-      <p>Bachelor of Commerce in Computer Applications | GPA: 4.0 | May 2023</p>
-    </div>
+  <section class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a detail-oriented and driven master’s student in Business Analytics at the University of North Texas. My projects include malnutrition analytics, AI hiring tools, and fraud detection systems using tools like Python, Tableau, SQL, and more.</p>
   </section>
 
-  <section id="skills">
-    <h2>Technical & Analytical Skills</h2>
-    <ul class="grid">
-      <li>Python</li>
-      <li>Tableau</li>
-      <li>SQL</li>
-      <li>R</li>
-      <li>Power BI</li>
-      <li>MySQL</li>
-      <li>MongoDB</li>
-      <li>GCP</li>
-    </ul>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>NSIC - Business Development Intern</h3>
-      <p>Analyzed market data and supported small businesses with financial and strategic insights.</p>
+  <section class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
     </div>
-    <div class="card">
-      <h3>Voice 4 Girls - Counselor</h3>
-      <p>Mentored students and applied data-driven strategies for improving engagement and outcomes.</p>
+    <div class="skill">
+      <div class="skill-name">Tableau</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">SQL</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Power BI</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Malnutrition Analytics</h3>
-      <p>Used Tableau and SQL to explore child malnutrition trends in India.</p>
+  <section class="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-item">
+      <h3>Malnutrition Analytics Dashboard</h3>
+      <p>This project involved building an interactive Tableau dashboard analyzing malnutrition data across multiple countries over a 20-year span. I integrated data from UNICEF and WHO databases, cleaned it using Excel and SQL, and used calculated fields to identify trends in child stunting, underweight prevalence, and food insecurity. The dashboard enabled users to filter by region and year, offering a clear visualization of malnutrition hotspots and their correlation with socio-economic indicators.</p>
     </div>
-    <div class="card">
-      <h3>AI Resume Screening</h3>
-      <p>Built a GPT-based resume screening system to reduce hiring time and bias.</p>
+
+    <div class="project-item">
+      <h3>Agentic AI Resume Screener</h3>
+      <p>This was a cutting-edge solution where I collaborated on building a GPT-powered resume screener that mimicked human-like reasoning for shortlisting candidates. Using LangChain and OpenAI APIs, we enabled context-aware filtering of resumes against job descriptions. I developed prompt templates, fine-tuned model parameters, and deployed a prototype for internal HR review. This project demonstrated the use of agentic AI for unbiased hiring and reduced screening time by 60% in testing.</p>
     </div>
-    <div class="card">
-      <h3>Bank Fraud Detection</h3>
-      <p>Applied machine learning and SHAP explainability to catch fraudulent banking activity.</p>
+
+    <div class="project-item">
+      <h3>Banking Fraud Detection Using SHAP & XGBoost</h3>
+      <p> Developed an AI-based fraud detection system to monitor transactions in real-time, identify anomalies, and minimize financial risk. Improved fraud detection accuracy and compliance while integrating explainability for regulatory transparency.</p>
+      <p>Tools Used: Python, ML (Supervised & Unsupervised), SHAP/LIME, AES-256, GDPR/PCI DSS standards.</p>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
+  <section class="education">
+    <h2 class="section-title">Education</h2>
+    <p><strong>University of North Texas</strong> — MS in Business Analytics (GPA 3.5)</p>
+    <p>Coursework: Data Visualization, Data Mining, Predictive Analysis, Business Statistics</p>
+    <p><strong>Osmania University</strong> — B.Com in Computer Applications (GPA 4.0)</p>
+    <p>Coursework: Database Management Systems, Business Statistics, Management Information Systems, Financial Accounting</p>
+  </section>
+
+  <section class="certifications">
+    <h2 class="section-title">Certifications</h2>
     <ul>
-      <li>Entrepreneurship Orientation Program (NSIC)</li>
+      <li>Entrepreneurship Orientation Program – NSIC</li>
       <li>Ad Mad Competition – Creative Strategy & Advertising</li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Harshitha | Powered by GitHub Pages</p>
-    <button onclick="scrollToTop()">Back to Top</button>
+    &copy; 2025 Business Analyst Portfolio. Designed by Harshitha.
   </footer>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
