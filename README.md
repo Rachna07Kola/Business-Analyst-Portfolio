@@ -63,10 +63,12 @@ to improve engagement and knowledge retention.
 - Analyzed and visualized malnutrition trends among children across different states using interactive dashboards in Tableau.
 - **Tools Used**
   Tableau, Excel, SQL.
+  
 **Agentic AI Resume Screening System**
 - Developed an AI-driven resume screening system to automate hiring, reduce bias, and improve efficiency. Enhanced candidate matching, engagement, and decision-making, reducing screening time by 50%.
 - **Tools Used:**
    Python, GPT-based LLMs, NLP.
+  
 **AI-Based Fraud Detection System in Banking**
 - Developed an AI-based fraud detection system to monitor transactions in real-time, identify anomalies, and minimize financial risk. Improved fraud detection accuracy and compliance while integrating explainability for regulatory transparency.
 - **Tools Used:**
